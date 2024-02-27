@@ -1,0 +1,53 @@
+@startuml
+object "<u>phpDemo1:Folder</u>" as fo0 {
+name = "php_demo1"
+}
+
+object "<u>sourceFiles:Folder</u>" as fo1 {
+name = "Source Files"
+}
+
+object "<u>includePath:Folder</u>" as fo2 {
+name = "Include Path"
+}
+
+object "<u>remoteFiles:Folder</u>" as fo3 {
+name = "Remote Files"
+}
+
+object "<u>dotPhalcon:Folder</u>" as fo4 {
+name = ".phalcon"
+}
+
+object "<u>cache:Folder</u>" as fo5 {
+name = "cache"
+}
+
+object "<u>publicFolder:Folder</u>" as fo6 {
+name = "public"
+}
+
+object "<u>dotHtaccess:File</u>" as fi0 {
+name = ".htaccess"
+}
+
+object "<u>dotHtrouter:File</u>" as fi1 {
+name = ".htrouter.php"
+}
+
+object "<u>index:File</u>" as fi2 {
+name = "index.html"
+}
+
+fo0 *-- fo1
+fo0 *-- fo2
+fo0 *-- fo3
+
+fo1 *-- fo4
+fo1 *-- fo5
+fo1 *-- fo6
+
+fo6 *-- fi0
+fo6 *-- fi1
+fo6 *-- fi2
+@enduml

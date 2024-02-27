@@ -1,0 +1,58 @@
+@startuml
+abstract class Employee {
+-firstName: String
+-lastName: String
+-socialSecurityNumber: String
+
++getFirstName(): String
++setFirstName(in firstName: String): void
++getLastName(): String
++setLastName(in lastName: String): void
++getSocialSecurityNumber(): String
++setSocialSecurityNumber(in socialSecurityNumber: String): void
++toString(): String
+}
+
+class SalariedEmployee {
+weeklySalary: int
+
++getWeeklySalary(): int
++setWeeklySalary(in weeklySalary: int): void
++toString(): String
+}
+
+class HourlyEmployee {
+wage: int
+hoursWorked: int
+
++getWage(): int
++setWage(in wage: int): void
++getHoursWorked(): int
++setHoursWorked(in hoursWorked:int): void
++toString(): String
+}
+
+class CommisionEmployee {
+commissionRate: int
+grossSales: int
+
++getCommissionRate(): int
++setCommissionRate(in commissionRate: int): void
++getGrossSales(): int
++setGrossSales(in grossSales): void
++toString(): String
+}
+
+class BaseEmployee {
+baseSalary: int
+
++getBaseSalary(): int
++setBaseSalary(in baseSalary: int): void
++toString(): String
+}
+
+Employee <|-- SalariedEmployee
+Employee <|-- HourlyEmployee
+Employee <|-- CommisionEmployee
+Employee <|-- BaseEmployee
+@enduml

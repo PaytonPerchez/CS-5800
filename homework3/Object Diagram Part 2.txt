@@ -1,0 +1,27 @@
+@startuml
+object "<u>ships[0]:Ship</u>" as s0 {
+shipName = "Titanic"
+yearBuilt = "March31st,1909"
+}
+
+object "<u>ships[1]:Ship</u>" as s1_0 {
+shipName = "MVGemini"
+yearBuilt = "May30th,1991"
+}
+
+object "<u>ships[1]:CruiseShip</u>" as s1_1 {
+maxNumberPassengers = 100
+}
+
+object "<u>ships[2]:Ship</u>" as s2_0 {
+shipName = "EverGiven"
+yearBuilt = "September25th,2018"
+}
+
+object "<u>ships[2]:CargoShip</u>" as s2_1 {
+cargoCapacityInTonnage = 220940
+}
+
+s1_0 <|-- s1_1
+s2_0 <|-- s2_1
+@enduml
